@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Routing\Router;
 
 /**
  * Users Controller
@@ -53,12 +54,23 @@ class UsersController extends AppController
         $user = $this->Users->newEntity();
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
-            if ($this->Users->save($user)) {
-                $this->Flash->success(__('The user has been saved.'));
-
-                return $this->redirect(['action' => 'index']);
+            $response["success"] = 0;
+            $response["redirectUrl"] = "";
+            $response["modal"] = "";
+            if(empty($user->getErrors())){
+                if ($this->Users->save($user)) {
+                    $response["success"] = 1;
+                    $response["message"] = "Guardado con Éxito<br>" . __('The user has been saved.');
+                    $response["redirectUrl"] = Router::url(['controller' => 'Users', 'action' => 'users']);
+                    $response["modal"] = "#modalAdd";
+                }else{
+                    $response["message"] = ['error' => ['custom' => __('The user could not be saved. Please, try again.')]];
+                }
+            }else{
+                $response["message"] = $user->getErrors();
             }
-            $this->Flash->error(__('The user could not be saved. Please, try again.'));
+            echo json_encode($response);
+            $this->autoRender = false;
         }
         $profiles = $this->Users->Profiles->find('list', ['limit' => 200]);
         $this->set(compact('user', 'profiles'));
@@ -73,17 +85,29 @@ class UsersController extends AppController
      */
     public function edit($id = null)
     {
+
         $user = $this->Users->get($id, [
             'contain' => []
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
-            if ($this->Users->save($user)) {
-                $this->Flash->success(__('The user has been saved.'));
-
-                return $this->redirect(['action' => 'index']);
+            $response["success"] = 0;
+            $response["redirectUrl"] = "";
+            $response["modal"] = "";
+            if(empty($user->getErrors())){
+                if ($this->Users->save($user)) {
+                    $response["success"] = 1;
+                    $response["message"] = "Guardado con Éxito<br>" . __('The user has been saved.');
+                    $response["redirectUrl"] = Router::url(['controller' => 'Users', 'action' => 'users']);
+                    $response["modal"] = "#modalEdit";
+                }else{
+                    $response["message"] = ['error' => ['custom' => __('The user could not be saved. Please, try again.')]];
+                }
+            }else{
+                $response["message"] = $user->getErrors();
             }
-            $this->Flash->error(__('The user could not be saved. Please, try again.'));
+            echo json_encode($response);
+            $this->autoRender = false;
         }
         $profiles = $this->Users->Profiles->find('list', ['limit' => 200]);
         $this->set(compact('user', 'profiles'));
@@ -99,14 +123,22 @@ class UsersController extends AppController
     public function delete($id = null)
     {
         $this->request->allowMethod(['post', 'delete']);
-        $user = $this->Users->get($id);
-        if ($this->Users->delete($user)) {
-            $this->Flash->success(__('The user has been deleted.'));
-        } else {
-            $this->Flash->error(__('The user could not be deleted. Please, try again.'));
-        }
+        $response["success"] = 0;
+        $response["redirectUrl"] = "";
+        $response["modal"] = "";
 
-        return $this->redirect(['action' => 'index']);
+        $user = $this->Users->get($id); 
+        $user->active = 0;       
+        if ($this->Users->delete($user)) {
+            $response["success"] = 1;
+            $response["message"] ="Eliminado con Éxito<br>" .  __('The user has been deleted.');
+            $response["redirectUrl"] = Router::url(['controller' => 'Users', 'action' => 'users']);
+            $response["modal"] = "#modalDelete";
+        } else {
+            $response["message"] = ['error' => ['custom' => __('The user could not be deleted. Please, try again.')]];
+        }
+        echo json_encode($response);
+        $this->autoRender = false;
     }
 
 
@@ -138,5 +170,15 @@ class UsersController extends AppController
     public function dashboard()
     {
 
+    }
+
+    public function users()
+    {        
+        $this->paginate = [
+            'contain' => ['Profiles']
+        ];
+        $users = $this->paginate($this->Users);
+
+        $this->set(compact('users'));
     }
 }

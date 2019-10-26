@@ -64,7 +64,7 @@ class AppController extends Controller
             'storage' => 'Session'
         ]);
 
-        $this->Auth->allow(['logout', 'add', 'login', 'register', 'index', 'dashboard']);
+        $this->Auth->allow();
 
         /*
          * Enable the following component for recommended CakePHP security settings.

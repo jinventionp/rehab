@@ -78,23 +78,44 @@ class UsersTable extends Table
             ->scalar('name')
             ->maxLength('name', 200)
             ->requirePresence('name', 'create')
-            ->notEmptyString('name');
+            ->notEmptyString('name', 'El campo Nombres es Obligatorio');
 
         $validator
             ->scalar('surname')
             ->maxLength('surname', 200)
-            ->allowEmptyString('surname');
+            ->allowEmptyString('surname', 'El campo Apellidos es Obligatorio');
 
         $validator
             ->email('email')
             ->requirePresence('email', 'create')
-            ->notEmptyString('email');
+            ->notEmptyString('email', null, false)
+            ->add('email', 'unique', [
+                'rule' => 'validateUnique', 
+                'provider' => 'table', 
+                'message' => 'El Correo electrónico ya existe, intente con otro Correo electrónico'
+            ])
+            ->add('email', 'validFormat', [
+                'rule'    => 'email',
+                'message' => 'Email no válido',
+            ]);
 
         $validator
             ->scalar('password')
             ->maxLength('password', 100)
             ->requirePresence('password', 'create')
-            ->notEmptyString('password');
+            ->notEmptyString('password', 'El campo Contraseña es Obligatorio', 'update');
+
+        $validator
+            ->requirePresence('confirm_password', 'create')
+            ->allowEmptyString('confirm_password', 'El campo Confirmar contraseña es Obligatorio', 'update')
+            ->add('confirm_password', 'custom', ['rule' => function ($value, $context) {
+                if (isset($context['data']['password']) && $value == $context['data']['password']) {
+                    return true;
+                }
+                return false;
+            },
+                'message' => 'Lo sentimos, las contraseñas no coinciden',
+            ]);
 
         $validator
             ->scalar('movil')

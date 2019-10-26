@@ -1,6 +1,8 @@
 <?php
 $cakeDescription = 'Dashboard';
 $webroot = $this->request->getAttribute('webroot');
+$action = $this->request->getParam('action');
+$controller = $this->request->getParam('controller');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,6 +18,10 @@ $webroot = $this->request->getAttribute('webroot');
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <!-- App favicon -->
         <link rel="shortcut icon" href="<?=$webroot?>assets/images/favicon.ico">
+
+        <!-- Plugins css -->
+        <link href="<?=$webroot?>assets/libs/flatpickr/flatpickr.min.css" rel="stylesheet" type="text/css" />
+        <link href="<?=$webroot?>assets/libs/select2/select2.min.css" rel="stylesheet" type="text/css" />
 
         <!-- App css -->
         <link href="<?=$webroot?>assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -390,7 +396,10 @@ $webroot = $this->request->getAttribute('webroot');
                     <!-- Start Content-->
                     <div class="container-fluid">
                         
-                        <?= $this->fetch('content') ?>  
+                        <?= $this->fetch('content') ?>
+                        <?=$this->element('modal_add', ["controller" => ""])?>
+                        <?=$this->element('modal_edit', ["controller" => ""])?>
+                        <?=$this->element('modal_delete', ["controller" => ""])?>
                         
                     </div> <!-- container -->
 
@@ -521,12 +530,27 @@ $webroot = $this->request->getAttribute('webroot');
             </div> <!-- end slimscroll-menu-->
         </div>
         <!-- /Right-bar -->
+        <?php                 
+            if($action == "index")
+            {
+                echo $this->Form->hidden('moduleIndex', ['id' => 'moduleIndex', 'value' => $this->Url->build(["action" => $controller ])]);
+            }
+        ?>
 
         <!-- Right bar overlay-->
         <div class="rightbar-overlay"></div>
 
         <!-- Vendor js -->
         <script src="<?=$webroot?>assets/js/vendor.min.js"></script>
+
+        <!-- Plugins js -->
+        <script src="<?=$webroot?>assets/libs/flatpickr/flatpickr.min.js"></script>
+        <script src="<?=$webroot?>assets/libs/select2/select2.min.js"></script>
+        <script src="<?=$webroot?>assets/libs/jquery-form/jquery.form.min.js"></script>
+
+        <!-- Init js-->
+        <script src="<?=$webroot?>assets/js/pages/form-ajax.init.js"></script>
+        <script src="<?=$webroot?>assets/js/pages/form-ajax-actions.init.js"></script>
 
         <!-- App js -->
         <script src="<?=$webroot?>assets/js/app.min.js"></script>

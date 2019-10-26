@@ -235,3 +235,585 @@ Exception Attributes: array (
 Request URL: /users/add
 
 
+2019-10-25 06:09:31 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::<preClass=() could not be found, or is not accessible. (D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Controller\Controller.php:599)
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => '<preClass=',
+  'prefix' => '',
+  'plugin' => false,
+)
+#0 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#1 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#2 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\BaseApplication.php(234): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(123): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(168): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 D:\xampp\htdocs\rehab\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 D:\xampp\htdocs\rehab\webroot\index.php(40): Cake\Http\Server->run()
+#19 {main}
+Request URL: /users/%3Cpre%20class=
+Referer URL: http://localhost/rehab/users/index
+
+
+2019-10-25 06:11:04 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::<preClass=() could not be found, or is not accessible. (D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Controller\Controller.php:599)
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => '<preClass=',
+  'prefix' => '',
+  'plugin' => false,
+)
+#0 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#1 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#2 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\BaseApplication.php(234): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(123): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(168): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 D:\xampp\htdocs\rehab\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 D:\xampp\htdocs\rehab\webroot\index.php(40): Cake\Http\Server->run()
+#19 {main}
+Request URL: /users/%3Cpre%20class=
+Referer URL: http://localhost/rehab/users/index
+
+
+2019-10-25 06:11:54 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::<preClass=() could not be found, or is not accessible. (D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Controller\Controller.php:599)
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => '<preClass=',
+  'prefix' => '',
+  'plugin' => false,
+)
+#0 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#1 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#2 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\BaseApplication.php(234): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(123): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(168): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 D:\xampp\htdocs\rehab\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 D:\xampp\htdocs\rehab\webroot\index.php(40): Cake\Http\Server->run()
+#19 {main}
+Request URL: /users/%3Cpre%20class=
+Referer URL: http://localhost/rehab/users/index
+
+
+2019-10-25 06:12:15 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::<preClass=() could not be found, or is not accessible. (D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Controller\Controller.php:599)
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => '<preClass=',
+  'prefix' => '',
+  'plugin' => false,
+)
+#0 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#1 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#2 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\BaseApplication.php(234): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(123): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(168): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 D:\xampp\htdocs\rehab\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 D:\xampp\htdocs\rehab\webroot\index.php(40): Cake\Http\Server->run()
+#19 {main}
+Request URL: /users/%3Cpre%20class=
+Referer URL: http://localhost/rehab/users/index
+
+
+2019-10-25 06:12:41 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::<preClass=() could not be found, or is not accessible. (D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Controller\Controller.php:599)
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => '<preClass=',
+  'prefix' => '',
+  'plugin' => false,
+)
+#0 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#1 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#2 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\BaseApplication.php(234): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(123): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(168): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 D:\xampp\htdocs\rehab\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 D:\xampp\htdocs\rehab\webroot\index.php(40): Cake\Http\Server->run()
+#19 {main}
+Request URL: /users/%3Cpre%20class=
+Referer URL: http://localhost/rehab/users/index
+
+
+2019-10-25 06:15:37 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::users() could not be found, or is not accessible. (D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Controller\Controller.php:599)
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'users',
+  'prefix' => '',
+  'plugin' => false,
+)
+#0 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#1 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#2 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\BaseApplication.php(234): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(123): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(168): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 D:\xampp\htdocs\rehab\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 D:\xampp\htdocs\rehab\webroot\index.php(40): Cake\Http\Server->run()
+#19 {main}
+Request URL: /users/users
+Referer URL: http://localhost/rehab/users/index
+
+
+2019-10-25 06:16:21 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::users() could not be found, or is not accessible. (D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Controller\Controller.php:599)
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'users',
+  'prefix' => '',
+  'plugin' => false,
+)
+#0 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#1 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#2 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\BaseApplication.php(234): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(123): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(168): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 D:\xampp\htdocs\rehab\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 D:\xampp\htdocs\rehab\webroot\index.php(40): Cake\Http\Server->run()
+#19 {main}
+Request URL: /users/users
+Referer URL: http://localhost/rehab/users/index
+
+
+2019-10-25 06:18:42 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::users() could not be found, or is not accessible. (D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Controller\Controller.php:599)
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'users',
+  'prefix' => '',
+  'plugin' => false,
+)
+#0 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#1 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#2 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\BaseApplication.php(234): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(123): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(168): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 D:\xampp\htdocs\rehab\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 D:\xampp\htdocs\rehab\webroot\index.php(40): Cake\Http\Server->run()
+#19 {main}
+Request URL: /users/users
+Referer URL: http://localhost/rehab/users/index
+
+
+2019-10-25 07:10:23 Error: [Error] Call to a member function has() on null (D:\xampp\htdocs\rehab\src\Template\Users\users.ctp:23)
+#0 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\View\View.php(1418): include()
+#1 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\View\View.php(1379): Cake\View\View->_evaluate('D:\\xampp\\htdocs...', Array)
+#2 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\View\View.php(879): Cake\View\View->_render('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Controller\Controller.php(795): Cake\View\View->render(NULL, NULL)
+#4 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#5 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#6 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\BaseApplication.php(234): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(123): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(168): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 D:\xampp\htdocs\rehab\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 D:\xampp\htdocs\rehab\webroot\index.php(40): Cake\Http\Server->run()
+#23 {main}
+Request URL: /users/users
+Referer URL: http://localhost/rehab/users
+
+
+2019-10-25 07:17:59 Error: [Cake\View\Exception\MissingTemplateException] Template file "Users\add.ctp" is missing. (D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\View\View.php:1581)
+Exception Attributes: array (
+  'file' => 'Users\\add.ctp',
+)
+#0 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\View\View.php(875): Cake\View\View->_getViewFileName('Users\\add')
+#1 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Controller\Controller.php(795): Cake\View\View->render(NULL, NULL)
+#2 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#3 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#4 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\BaseApplication.php(234): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(123): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(168): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 D:\xampp\htdocs\rehab\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 D:\xampp\htdocs\rehab\webroot\index.php(40): Cake\Http\Server->run()
+#21 {main}
+Request URL: /users/add
+Referer URL: http://localhost/rehab/users
+
+
+2019-10-25 07:18:03 Error: [Cake\View\Exception\MissingTemplateException] Template file "Users\add.ctp" is missing. (D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\View\View.php:1581)
+Exception Attributes: array (
+  'file' => 'Users\\add.ctp',
+)
+#0 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\View\View.php(875): Cake\View\View->_getViewFileName('Users\\add')
+#1 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Controller\Controller.php(795): Cake\View\View->render(NULL, NULL)
+#2 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#3 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#4 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\BaseApplication.php(234): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(123): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(168): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 D:\xampp\htdocs\rehab\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 D:\xampp\htdocs\rehab\webroot\index.php(40): Cake\Http\Server->run()
+#21 {main}
+Request URL: /users/add
+Referer URL: http://localhost/rehab/users
+
+
+2019-10-25 08:06:44 Error: [Error] Class 'App\Model\Entity\DefaultPasswordHasher' not found (D:\xampp\htdocs\rehab\src\Model\Entity\User.php:70)
+#0 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Datasource\EntityTrait.php(264): App\Model\Entity\User->_setPassword('123456')
+#1 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\ORM\Marshaller.php(601): Cake\ORM\Entity->set(Array)
+#2 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\ORM\Table.php(2729): Cake\ORM\Marshaller->merge(Object(App\Model\Entity\User), Array, Array)
+#3 D:\xampp\htdocs\rehab\src\Controller\UsersController.php(55): Cake\ORM\Table->patchEntity(Object(App\Model\Entity\User), Array)
+#4 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Controller\Controller.php(609): App\Controller\UsersController->add()
+#5 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#6 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#7 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\BaseApplication.php(234): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(123): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(168): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 D:\xampp\htdocs\rehab\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 D:\xampp\htdocs\rehab\webroot\index.php(40): Cake\Http\Server->run()
+#24 {main}
+Request URL: /users/add
+Referer URL: http://localhost/rehab/users
+
+
+2019-10-25 08:10:05 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "requests" (D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:485)
+#0 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\ORM\Table.php(1624): Cake\ORM\Query->firstOrFail()
+#1 D:\xampp\htdocs\rehab\vendor\cakephp\debug_kit\src\Controller\RequestsController.php(66): Cake\ORM\Table->get(Array, Array)
+#2 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Controller\Controller.php(609): DebugKit\Controller\RequestsController->view('593e991a-923e-4...')
+#3 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#4 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(DebugKit\Controller\RequestsController))
+#5 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\BaseApplication.php(234): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(162): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 D:\xampp\htdocs\rehab\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 D:\xampp\htdocs\rehab\webroot\index.php(40): Cake\Http\Server->run()
+#18 {main}
+Request URL: /debug-kit/toolbar/593e991a-923e-4689-899c-629e7079f582
+Referer URL: http://localhost/rehab/users/index
+
+
+2019-10-25 08:11:42 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`rehab`.`users`, CONSTRAINT `fk_users_profiles1` FOREIGN KEY (`profile_id`) REFERENCES `profiles` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION) (D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php:38)
+#0 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(38): PDOStatement->execute(NULL)
+#1 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(173): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Database\Connection.php(333): Cake\Database\Log\LoggingStatement->execute()
+#4 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#5 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Database\Connection.php(336): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#6 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Database\Query.php(218): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#7 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\ORM\Table.php(2128): Cake\Database\Query->execute()
+#8 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\ORM\Table.php(2020): Cake\ORM\Table->_insert(Object(App\Model\Entity\User), Array)
+#9 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\ORM\Table.php(1933): Cake\ORM\Table->_processSave(Object(App\Model\Entity\User), Object(ArrayObject))
+#10 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\ORM\Table.php(1638): Cake\ORM\Table->Cake\ORM\{closure}()
+#11 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Database\Connection.php(737): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#12 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\ORM\Table.php(1639): Cake\Database\Connection->transactional(Object(Closure))
+#13 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\ORM\Table.php(1934): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#14 D:\xampp\htdocs\rehab\src\Controller\UsersController.php(60): Cake\ORM\Table->save(Object(App\Model\Entity\User))
+#15 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Controller\Controller.php(609): App\Controller\UsersController->add()
+#16 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#17 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#18 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\BaseApplication.php(234): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(123): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#23 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(168): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#26 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#27 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#30 D:\xampp\htdocs\rehab\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#31 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#32 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#33 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#34 D:\xampp\htdocs\rehab\webroot\index.php(40): Cake\Http\Server->run()
+#35 {main}
+Request URL: /users/add
+Referer URL: http://localhost/rehab/users/index
+
+
+2019-10-25 08:18:56 Error: [Error] Class 'App\Controller\Router' not found (D:\xampp\htdocs\rehab\src\Controller\UsersController.php:63)
+#0 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Controller\Controller.php(609): App\Controller\UsersController->add()
+#1 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#2 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#3 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\BaseApplication.php(234): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#4 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(123): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(168): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 D:\xampp\htdocs\rehab\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 D:\xampp\htdocs\rehab\webroot\index.php(40): Cake\Http\Server->run()
+#20 {main}
+Request URL: /users/add
+Referer URL: http://localhost/rehab/users/index
+
+
+2019-10-25 22:03:47 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::remove() could not be found, or is not accessible. (D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Controller\Controller.php:599)
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'remove',
+  'prefix' => '',
+  'plugin' => false,
+)
+#0 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#1 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#2 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\BaseApplication.php(234): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(123): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(168): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 D:\xampp\htdocs\rehab\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 D:\xampp\htdocs\rehab\webroot\index.php(40): Cake\Http\Server->run()
+#19 {main}
+Request URL: /users/remove/1
+Referer URL: http://localhost/rehab/users/index
+
+
+2019-10-25 23:11:12 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::remove() could not be found, or is not accessible. (D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Controller\Controller.php:599)
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'remove',
+  'prefix' => '',
+  'plugin' => false,
+)
+#0 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#1 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#2 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\BaseApplication.php(234): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(123): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(168): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 D:\xampp\htdocs\rehab\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 D:\xampp\htdocs\rehab\webroot\index.php(40): Cake\Http\Server->run()
+#19 {main}
+Request URL: /users/remove/1
+Referer URL: http://localhost/rehab/users/index
+
+
+2019-10-26 00:33:44 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::remove() could not be found, or is not accessible. (D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Controller\Controller.php:599)
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'remove',
+  'prefix' => '',
+  'plugin' => false,
+)
+#0 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#1 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#2 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\BaseApplication.php(234): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(123): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(168): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 D:\xampp\htdocs\rehab\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 D:\xampp\htdocs\rehab\webroot\index.php(40): Cake\Http\Server->run()
+#19 {main}
+Request URL: /users/remove/1
+Referer URL: http://localhost/rehab/users
+
+
+2019-10-26 00:37:10 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::remove() could not be found, or is not accessible. (D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Controller\Controller.php:599)
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'remove',
+  'prefix' => '',
+  'plugin' => false,
+)
+#0 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#1 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#2 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\BaseApplication.php(234): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(123): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(168): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 D:\xampp\htdocs\rehab\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 D:\xampp\htdocs\rehab\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 D:\xampp\htdocs\rehab\webroot\index.php(40): Cake\Http\Server->run()
+#19 {main}
+Request URL: /users/remove/1
+Referer URL: http://localhost/rehab/users
+
+
