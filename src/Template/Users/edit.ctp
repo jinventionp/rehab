@@ -1,4 +1,7 @@
-<?php $webroot = $this->request->getAttribute('webroot');?>
+<?php 
+use Cake\I18n\Time;
+$webroot = $this->request->getAttribute('webroot');
+?>
 <script src="<?=$webroot?>assets/js/pages/form-elements.init.js"></script>
 <script src="<?=$webroot?>assets/js/pages/form-ajax-actions.init.js"></script>
 <?= $this->Form->create($user, ["id" => "formActions"]) ?>
@@ -39,7 +42,7 @@
         <div class="form-group">
             <label for="birth-date" class="control-label">Fecha de Nacimiento</label>
             <!--<input type="text" id="basic-datepicker" class="form-control" placeholder="Basic datepicker">-->
-            <?= $this->Form->control('birth_date', ["label" => false, 'type' => 'text', "class" => "form-control","placeholder" => "AAAA-MM-DD", 'readonly' => "readonly"]);?>
+            <?= $this->Form->control('birth_date', ["label" => false, 'type' => 'text', "class" => "form-control flatpickr-input","placeholder" => "AAAA-MM-DD", 'readonly' => "readonly", 'value' => $user->birth_date->i18nFormat('YYYY-MM-dd')]);?>
         </div>
     </div>
 </div>
@@ -47,7 +50,7 @@
     <div class="col-md-4">
         <div class="form-group">
             <label for="password" class="control-label">Contraseña</label>
-            <?= $this->Form->control('password', ["label" => false, "class" => "form-control", "placeholder" => "Ingresa tu Contraseña"]);?>
+            <?= $this->Form->control('password', ["label" => false, "class" => "form-control", "placeholder" => "Ingresa tu Contraseña", "value" => ""]);?>
         </div>
     </div>
     <div class="col-md-4">
@@ -66,8 +69,10 @@
 <div class="row">
     <div class="col-md-4">
         <div class="custom-control custom-checkbox">            
-            <input type="checkbox" class="custom-control-input" name="active" id="active" checked="checked" value=""> 
-            <label class="custom-control-label" for="active">Activo</label>           
+            <?=$this->Form->control('active', ['label' => false, 'class' => 'custom-control-input', 'templates' => [
+        'inputContainer' => '{{content}}'
+    ]])?>
+            <label class="custom-control-label" for="active">Activo</label>        
         </div>
     </div>
 </div>

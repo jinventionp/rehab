@@ -56,7 +56,7 @@
                     }
                 });
                   
-                $('#opening_days').val(JSON.stringify(days));
+            $('#opening_days').val(JSON.stringify(days));
             }else if(action == "edit"){ console.log('edit');                
                 if($('#opening_days').val() == "" ){
                     $('#opening_days').val('{"lu":0,"ma":0,"mi":0,"ju":0,"vi":0,"sa":0,"do":0}');
@@ -101,6 +101,7 @@
                 defaultDate: "18:00"
             });        
         }
+
         if($('#birth-date').length){
             $('#birth-date').flatpickr({
                 dateFormat: 'Y-m-d'

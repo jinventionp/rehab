@@ -7,22 +7,20 @@ use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
 /**
- * Typecontracs Model
+ * Typecontracts Model
  *
- * @property \App\Model\Table\ContractsTable&\Cake\ORM\Association\HasMany $Contracts
- *
- * @method \App\Model\Entity\Typecontrac get($primaryKey, $options = [])
- * @method \App\Model\Entity\Typecontrac newEntity($data = null, array $options = [])
- * @method \App\Model\Entity\Typecontrac[] newEntities(array $data, array $options = [])
- * @method \App\Model\Entity\Typecontrac|false save(\Cake\Datasource\EntityInterface $entity, $options = [])
- * @method \App\Model\Entity\Typecontrac saveOrFail(\Cake\Datasource\EntityInterface $entity, $options = [])
- * @method \App\Model\Entity\Typecontrac patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
- * @method \App\Model\Entity\Typecontrac[] patchEntities($entities, array $data, array $options = [])
- * @method \App\Model\Entity\Typecontrac findOrCreate($search, callable $callback = null, $options = [])
+ * @method \App\Model\Entity\Typecontract get($primaryKey, $options = [])
+ * @method \App\Model\Entity\Typecontract newEntity($data = null, array $options = [])
+ * @method \App\Model\Entity\Typecontract[] newEntities(array $data, array $options = [])
+ * @method \App\Model\Entity\Typecontract|false save(\Cake\Datasource\EntityInterface $entity, $options = [])
+ * @method \App\Model\Entity\Typecontract saveOrFail(\Cake\Datasource\EntityInterface $entity, $options = [])
+ * @method \App\Model\Entity\Typecontract patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
+ * @method \App\Model\Entity\Typecontract[] patchEntities($entities, array $data, array $options = [])
+ * @method \App\Model\Entity\Typecontract findOrCreate($search, callable $callback = null, $options = [])
  *
  * @mixin \Cake\ORM\Behavior\TimestampBehavior
  */
-class TypecontracsTable extends Table
+class TypecontractsTable extends Table
 {
     /**
      * Initialize method
@@ -34,15 +32,11 @@ class TypecontracsTable extends Table
     {
         parent::initialize($config);
 
-        $this->setTable('typecontracs');
+        $this->setTable('typecontracts');
         $this->setDisplayField('name');
         $this->setPrimaryKey('id');
 
         $this->addBehavior('Timestamp');
-
-        $this->hasMany('Contracts', [
-            'foreignKey' => 'typecontrac_id'
-        ]);
     }
 
     /**

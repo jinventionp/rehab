@@ -11,8 +11,8 @@
         <li><?= $this->Form->postLink(__('Delete Contract'), ['action' => 'delete', $contract->id], ['confirm' => __('Are you sure you want to delete # {0}?', $contract->id)]) ?> </li>
         <li><?= $this->Html->link(__('List Contracts'), ['action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Contract'), ['action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Typecontracs'), ['controller' => 'Typecontracs', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Typecontrac'), ['controller' => 'Typecontracs', 'action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('List Typecontracts'), ['controller' => 'Typecontracts', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('New Typecontract'), ['controller' => 'Typecontracts', 'action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List Contracts Customers'), ['controller' => 'ContractsCustomers', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Contracts Customer'), ['controller' => 'ContractsCustomers', 'action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List Coupons Packages'), ['controller' => 'CouponsPackages', 'action' => 'index']) ?> </li>
@@ -25,8 +25,8 @@
     <h3><?= h($contract->name) ?></h3>
     <table class="vertical-table">
         <tr>
-            <th scope="row"><?= __('Typecontrac') ?></th>
-            <td><?= $contract->has('typecontrac') ? $this->Html->link($contract->typecontrac->name, ['controller' => 'Typecontracs', 'action' => 'view', $contract->typecontrac->id]) : '' ?></td>
+            <th scope="row"><?= __('Typecontract') ?></th>
+            <td><?= $contract->has('typecontract') ? $this->Html->link($contract->typecontract->name, ['controller' => 'Typecontracts', 'action' => 'view', $contract->typecontract->id]) : '' ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Name') ?></th>
@@ -38,7 +38,7 @@
         </tr>
         <tr>
             <th scope="row"><?= __('Contract Frequency') ?></th>
-            <td><?= h($contract->contract frequency) ?></td>
+            <td><?= h($contract->contract_frequency) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Id') ?></th>

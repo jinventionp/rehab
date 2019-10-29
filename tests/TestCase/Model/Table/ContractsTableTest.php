@@ -24,7 +24,7 @@ class ContractsTableTest extends TestCase
      */
     public $fixtures = [
         'app.Contracts',
-        'app.Typecontracs',
+        'app.Typecontracts',
         'app.ContractsCustomers',
         'app.CouponsPackages',
         'app.Payments'

@@ -65,16 +65,32 @@ class CardsTable extends Table
             ->notEmptyString('name');
 
         $validator
-            ->scalar('number_card')
-            ->maxLength('number_card', 16)
-            ->requirePresence('number_card', 'create')
-            ->notEmptyString('number_card');
+            ->scalar('card_number')
+            ->maxLength('card_number', 16)
+            ->requirePresence('card_number', 'create')
+            ->notEmptyString('card_number');
 
         $validator
-            ->scalar('expedition_date')
-            ->maxLength('expedition_date', 10)
-            ->requirePresence('expedition_date', 'create')
-            ->notEmptyString('expedition_date');
+            ->scalar('expiry_month')
+            ->maxLength('expiry_month', 10)
+            ->requirePresence('expiry_month', 'create')
+            ->notEmptyString('expiry_month');
+
+        $validator
+            ->scalar('expiry_year')
+            ->maxLength('expiry_year', 10)
+            ->requirePresence('expiry_year', 'create')
+            ->notEmptyString('expiry_year');
+
+        $validator
+            ->scalar('cvv')
+            ->maxLength('cvv', 10)
+            ->requirePresence('cvv', 'create')
+            ->notEmptyString('cvv');
+
+        $validator
+            ->boolean('defaulted')
+            ->allowEmptyString('defaulted');
 
         $validator
             ->scalar('token')

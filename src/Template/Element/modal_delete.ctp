@@ -7,12 +7,13 @@
             </div>
             
             <div class="modal-body">
-            	
+                <input type="hidden" name="_csrfToken" id="_csrfToken" autocomplete="off" value="<?=$this->request->getParam('_csrfToken')?>">
+            	<input type="hidden" name="urlDetele"  id="urlDetele">
             </div>
-            <!--<div class="modal-footer">
+            <div class="modal-footer">
                 <button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-info waves-effect waves-light">Guardar</button>
-            </div>-->
+                <button type="button" id="btnDelete" class="btn btn-danger waves-effect waves-light">Eliminar</button>
+            </div>
         </div>
     </div>
 </div><!-- /.modal -->

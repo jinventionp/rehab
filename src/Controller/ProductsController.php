@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Routing\Router;
 
 /**
  * Products Controller
@@ -50,12 +51,23 @@ class ProductsController extends AppController
         $product = $this->Products->newEntity();
         if ($this->request->is('post')) {
             $product = $this->Products->patchEntity($product, $this->request->getData());
-            if ($this->Products->save($product)) {
-                $this->Flash->success(__('The product has been saved.'));
-
-                return $this->redirect(['action' => 'index']);
+            $response["success"] = 0;
+            $response["redirectUrl"] = "";
+            $response["modal"] = "";
+            if(empty($product->getErrors())){
+                if ($this->Products->save($product)) {
+                    $response["success"] = 1;
+                    $response["message"] = "Guardado con Éxito<br>" . __('The product has been saved.');
+                    $response["redirectUrl"] = Router::url(['controller' => 'Products', 'action' => 'products']);
+                    $response["modal"] = "#modalAdd";
+                }else{
+                    $response["message"] = ['error' => ['custom' => __('The product could not be saved. Please, try again.')]];
+                }
+            }else{
+                $response["message"] = $product->getErrors();
             }
-            $this->Flash->error(__('The product could not be saved. Please, try again.'));
+            echo json_encode($response);
+            $this->autoRender = false;
         }
         $categories = $this->Products->Categories->find('list', ['limit' => 200]);
         $this->set(compact('product', 'categories'));
@@ -75,12 +87,23 @@ class ProductsController extends AppController
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $product = $this->Products->patchEntity($product, $this->request->getData());
-            if ($this->Products->save($product)) {
-                $this->Flash->success(__('The product has been saved.'));
-
-                return $this->redirect(['action' => 'index']);
+            $response["success"] = 0;
+            $response["redirectUrl"] = "";
+            $response["modal"] = "";
+            if(empty($product->getErrors())){
+                if ($this->Products->save($product)) {
+                    $response["success"] = 1;
+                    $response["message"] = "Guardado con Éxito<br>" . __('The product has been saved.');
+                    $response["redirectUrl"] = Router::url(['controller' => 'Products', 'action' => 'products']);
+                    $response["modal"] = "#modalEdit";
+                }else{
+                    $response["message"] = ['error' => ['custom' => __('The product could not be saved. Please, try again.')]];
+                }
+            }else{
+                $response["message"] = $product->getErrors();
             }
-            $this->Flash->error(__('The product could not be saved. Please, try again.'));
+            echo json_encode($response);
+            $this->autoRender = false;
         }
         $categories = $this->Products->Categories->find('list', ['limit' => 200]);
         $this->set(compact('product', 'categories'));
@@ -96,13 +119,48 @@ class ProductsController extends AppController
     public function delete($id = null)
     {
         $this->request->allowMethod(['post', 'delete']);
+        $response["success"] = 0;
+        $response["redirectUrl"] = "";
+        $response["modal"] = "";
         $product = $this->Products->get($id);
         if ($this->Products->delete($product)) {
-            $this->Flash->success(__('The product has been deleted.'));
+            $response["success"] = 1;
+            $response["message"] ="Eliminado con Éxito<br>" .  __('The product has been deleted.');
+            $response["redirectUrl"] = Router::url(['controller' => 'Products', 'action' => 'products']);
+            $response["modal"] = "#modalDelete";
         } else {
-            $this->Flash->error(__('The product could not be deleted. Please, try again.'));
+            $response["message"] = ['error' => ['custom' => __('The product could not be deleted. Please, try again.')]];
         }
+        echo json_encode($response);
+        $this->autoRender = false;
 
         return $this->redirect(['action' => 'index']);
+    }
+
+    public function products($txtSearch = null, $cboNumRegister = 10)
+    {        
+        $conditions = [];
+        if (!empty($txtSearch)) {
+            $conditions = ['OR' => [
+                    ['Products.name LIKE' => '%' . $txtSearch . '%'],
+                    ['Products.price LIKE' => '%' . $txtSearch . '%'],
+                    ['Products.description LIKE' => '%' . $txtSearch . '%'], 
+                ],
+                //'AND' => ['Products.active LIKE' => 1],
+            ];
+        }else{
+            //$conditions = ['Products.active' => 1];
+        }
+        $this->paginate = [
+            'conditions' => $conditions,
+            'contain' => ['Categories'],
+            'limit' => $cboNumRegister,
+            'maxLimit' => 100,
+            'order' => ['Products.id' => 'DESC']
+        ];
+
+        $products = $this->paginate($this->Products);
+        
+        $this->set(compact('products'));
     }
 }

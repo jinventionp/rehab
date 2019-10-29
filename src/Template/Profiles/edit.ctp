@@ -1,31 +1,17 @@
-<?php
-/**
- * @var \App\View\AppView $this
- * @var \App\Model\Entity\Profile $profile
- */
-?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $profile->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $profile->id)]
-            )
-        ?></li>
-        <li><?= $this->Html->link(__('List Profiles'), ['action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add']) ?></li>
-    </ul>
-</nav>
-<div class="profiles form large-9 medium-8 columns content">
-    <?= $this->Form->create($profile) ?>
-    <fieldset>
-        <legend><?= __('Edit Profile') ?></legend>
-        <?php
-            echo $this->Form->control('name');
-        ?>
-    </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
-    <?= $this->Form->end() ?>
+<?php $webroot = $this->request->getAttribute('webroot'); ?>
+<script src="<?=$webroot?>assets/js/pages/form-elements.init.js"></script>
+<script src="<?=$webroot?>assets/js/pages/form-ajax-actions.init.js"></script>
+<?= $this->Form->create($profile, ["id" => "formActions"]) ?>
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            <label for="name" class="control-label">Nombre</label>
+            <?= $this->Form->control('name', ["label" => false, "class" => "form-control","placeholder" => "Nombre"]);?>
+        </div>
+    </div>    
 </div>
+<div class="form-group mb-0 text-right">
+    <button type="submit" class="btn btn-primary waves-effect waves-light">Guardar</button>
+    <button class="btn btn-secondary waves-effect m-l-5" data-dismiss="modal" aria-hidden="true">Cancelar</button>
+</div>
+<?= $this->Form->end() ?>

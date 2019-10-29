@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Routing\Router;
 
 /**
  * Cards Controller
@@ -53,12 +54,23 @@ class CardsController extends AppController
         $card = $this->Cards->newEntity();
         if ($this->request->is('post')) {
             $card = $this->Cards->patchEntity($card, $this->request->getData());
-            if ($this->Cards->save($card)) {
-                $this->Flash->success(__('The card has been saved.'));
-
-                return $this->redirect(['action' => 'index']);
+            $response["success"] = 0;
+            $response["redirectUrl"] = "";
+            $response["modal"] = "";
+            if(empty($card->getErrors())){
+                if ($this->Cards->save($card)) {
+                    $response["success"] = 1;
+                    $response["message"] = "Guardado con Éxito<br>" . __('The card has been saved.');
+                    $response["redirectUrl"] = Router::url(['controller' => 'Cards', 'action' => 'cards']);
+                    $response["modal"] = "#modalAdd";
+                }else{
+                    $response["message"] = ['error' => ['custom' => __('The card could not be saved. Please, try again.')]];
+                }
+            }else{
+                $response["message"] = $card->getErrors();
             }
-            $this->Flash->error(__('The card could not be saved. Please, try again.'));
+            echo json_encode($response);
+            $this->autoRender = false;
         }
         $users = $this->Cards->Users->find('list', ['limit' => 200]);
         $this->set(compact('card', 'users'));
@@ -78,12 +90,23 @@ class CardsController extends AppController
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $card = $this->Cards->patchEntity($card, $this->request->getData());
-            if ($this->Cards->save($card)) {
-                $this->Flash->success(__('The card has been saved.'));
-
-                return $this->redirect(['action' => 'index']);
+            $response["success"] = 0;
+            $response["redirectUrl"] = "";
+            $response["modal"] = "";
+            if(empty($card->getErrors())){
+                if ($this->Cards->save($card)) {
+                    $response["success"] = 1;
+                    $response["message"] = "Guardado con Éxito<br>" . __('The card has been saved.');
+                    $response["redirectUrl"] = Router::url(['controller' => 'Cards', 'action' => 'cards']);
+                    $response["modal"] = "#modalEdit";
+                }else{
+                    $response["message"] = ['error' => ['custom' => __('The card could not be saved. Please, try again.')]];
+                }
+            }else{
+                $response["message"] = $card->getErrors();
             }
-            $this->Flash->error(__('The card could not be saved. Please, try again.'));
+            echo json_encode($response);
+            $this->autoRender = false;
         }
         $users = $this->Cards->Users->find('list', ['limit' => 200]);
         $this->set(compact('card', 'users'));
@@ -99,13 +122,48 @@ class CardsController extends AppController
     public function delete($id = null)
     {
         $this->request->allowMethod(['post', 'delete']);
+        $response["success"] = 0;
+        $response["redirectUrl"] = "";
+        $response["modal"] = "";
         $card = $this->Cards->get($id);
         if ($this->Cards->delete($card)) {
-            $this->Flash->success(__('The card has been deleted.'));
+            $response["success"] = 1;
+            $response["message"] ="Eliminado con Éxito<br>" .  __('The card has been deleted.');
+            $response["redirectUrl"] = Router::url(['controller' => 'Cards', 'action' => 'cards']);
+            $response["modal"] = "#modalDelete";
         } else {
-            $this->Flash->error(__('The card could not be deleted. Please, try again.'));
+            $response["message"] = ['error' => ['custom' => __('The card could not be deleted. Please, try again.')]];
         }
+        echo json_encode($response);
+        $this->autoRender = false;
+    }
 
-        return $this->redirect(['action' => 'index']);
+    public function cards($txtSearch = null, $cboNumRegister = 10)
+    {        
+        $conditions = [];
+        if (!empty($txtSearch)) {
+            $conditions = ['OR' => [
+                    ['Cards.name LIKE' => '%' . $txtSearch . '%'],
+                    ['Cards.number_card LIKE' => '%' . $txtSearch . '%'],
+                    ['Cards.expedition_date LIKE' => '%' . $txtSearch . '%'],
+                    ['Cards.security_code LIKE' => '%' . $txtSearch . '%'], 
+                    ['Cards.token LIKE' => '%' . $txtSearch . '%'],          
+                ],
+                //'AND' => ['Cards.active LIKE' => 1],
+            ];
+        }else{
+            //$conditions = ['Cards.active' => 1];
+        }
+        $this->paginate = [
+            'conditions' => $conditions,
+            'contain' => ['Users'],
+            'limit' => $cboNumRegister,
+            'maxLimit' => 100,
+            'order' => ['Cards.id' => 'DESC']
+        ];
+
+        $cards = $this->paginate($this->Cards);
+        
+        $this->set(compact('cards'));
     }
 }

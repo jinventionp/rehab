@@ -9,7 +9,7 @@ use Cake\Validation\Validator;
 /**
  * Contracts Model
  *
- * @property \App\Model\Table\TypecontracsTable&\Cake\ORM\Association\BelongsTo $Typecontracs
+ * @property \App\Model\Table\TypecontractsTable&\Cake\ORM\Association\BelongsTo $Typecontracts
  * @property \App\Model\Table\ContractsCustomersTable&\Cake\ORM\Association\HasMany $ContractsCustomers
  * @property \App\Model\Table\CouponsPackagesTable&\Cake\ORM\Association\HasMany $CouponsPackages
  * @property \App\Model\Table\PaymentsTable&\Cake\ORM\Association\HasMany $Payments
@@ -43,8 +43,8 @@ class ContractsTable extends Table
 
         $this->addBehavior('Timestamp');
 
-        $this->belongsTo('Typecontracs', [
-            'foreignKey' => 'typecontrac_id',
+        $this->belongsTo('Typecontracts', [
+            'foreignKey' => 'typecontract_id',
             'joinType' => 'INNER'
         ]);
         $this->hasMany('ContractsCustomers', [
@@ -90,9 +90,9 @@ class ContractsTable extends Table
             ->allowEmptyString('customer_can_cancel');
 
         $validator
-            ->scalar('contract frequency')
-            ->maxLength('contract frequency', 10)
-            ->allowEmptyString('contract frequency');
+            ->scalar('contract_frequency')
+            ->maxLength('contract_frequency', 10)
+            ->allowEmptyString('contract_frequency');
 
         $validator
             ->integer('number_contract_frecuency')
@@ -126,7 +126,7 @@ class ContractsTable extends Table
      */
     public function buildRules(RulesChecker $rules)
     {
-        $rules->add($rules->existsIn(['typecontrac_id'], 'Typecontracs'));
+        $rules->add($rules->existsIn(['typecontract_id'], 'Typecontracts'));
 
         return $rules;
     }

@@ -1,53 +1,50 @@
-<?php
-/**
- * @var \App\View\AppView $this
- * @var \App\Model\Entity\Profile[]|\Cake\Collection\CollectionInterface $profiles
- */
-?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New Profile'), ['action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add']) ?></li>
-    </ul>
-</nav>
-<div class="profiles index large-9 medium-8 columns content">
-    <h3><?= __('Profiles') ?></h3>
-    <table cellpadding="0" cellspacing="0">
-        <thead>
-            <tr>
-                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('name') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('created') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
-                <th scope="col" class="actions"><?= __('Actions') ?></th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($profiles as $profile): ?>
-            <tr>
-                <td><?= $this->Number->format($profile->id) ?></td>
-                <td><?= h($profile->name) ?></td>
-                <td><?= h($profile->created) ?></td>
-                <td><?= h($profile->modified) ?></td>
-                <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $profile->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $profile->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $profile->id], ['confirm' => __('Are you sure you want to delete # {0}?', $profile->id)]) ?>
-                </td>
-            </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
-    <div class="paginator">
-        <ul class="pagination">
-            <?= $this->Paginator->first('<< ' . __('first')) ?>
-            <?= $this->Paginator->prev('< ' . __('previous')) ?>
-            <?= $this->Paginator->numbers() ?>
-            <?= $this->Paginator->next(__('next') . ' >') ?>
-            <?= $this->Paginator->last(__('last') . ' >>') ?>
-        </ul>
-        <p><?= $this->Paginator->counter(['format' => __('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')]) ?></p>
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">            
+            <h4 class="page-title"><?= __('Profiles')?></h4>
+        </div>
     </div>
+</div>     
+<!-- end page title --> 
+
+<div class="row">
+    <div class="col-12">
+        <div class="card-box">
+            <div class="row">
+                <div class="col-lg-8">
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <label for="txtSearch" class="sr-only">Buscar</label>
+                            <input type="txtSearch" class="form-control" id="txtSearch" placeholder="Buscar...">
+                        </div>
+                        <div class="form-group mx-sm-3">
+                            <label for="cboNumRegister" class="mr-2">Registros</label>
+                            <select class="custom-select" id="cboNumRegister">
+                                <option value="10">10</option>
+                                <option value="20">20</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-4">
+                    <div class="text-lg-right mt-3 mt-lg-0">
+                        <a href="javascript: void(0);" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target="#modalAdd" data-url="<?=$this->Url->build(["controller" => "Profiles", "action" => "add"])?>" data-title="<?= __('New Profile')?>" id="openModalAdd"><i class="mdi mdi-plus-circle mr-1"></i> <?= __('New Profile')?></a>
+                    </div>
+                </div><!-- end col-->
+            </div> <!-- end row -->
+        </div> <!-- end card-box -->
+    </div> <!-- end col-->
+</div>
+<!-- end row-->
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card-box">
+            <div id="msgFormActions"></div> 
+            <div id="contentList"></div>
+        </div> <!-- end card-box -->
+    </div> <!-- end col -->
 </div>

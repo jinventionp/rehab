@@ -9,8 +9,10 @@ use Cake\ORM\Entity;
  * @property int $id
  * @property int $user_id
  * @property string $name
- * @property string $number_card
- * @property string $expedition_date
+ * @property string $card_number
+ * @property string $expiry_month
+ * @property string $expiry_year
+ * @property string $defaulted
  * @property string|null $token
  * @property \Cake\I18n\FrozenTime|null $created
  * @property \Cake\I18n\FrozenTime|null $modified
@@ -31,8 +33,11 @@ class Card extends Entity
     protected $_accessible = [
         'user_id' => true,
         'name' => true,
-        'number_card' => true,
-        'expedition_date' => true,
+        'card_number' => true,
+        'expiry_month' => true,
+        'expiry_year' => true,
+        'cvv' => true,
+        'defaulted' => true,
         'token' => true,
         'created' => true,
         'modified' => true,

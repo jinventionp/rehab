@@ -89,8 +89,12 @@ class UsersController extends AppController
         $user = $this->Users->get($id, [
             'contain' => []
         ]);
+
         if ($this->request->is(['patch', 'post', 'put'])) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
+            if(empty($this->request->getData('password')))
+                unset($user->password);
+            
             $response["success"] = 0;
             $response["redirectUrl"] = "";
             $response["modal"] = "";
@@ -129,7 +133,7 @@ class UsersController extends AppController
 
         $user = $this->Users->get($id); 
         $user->active = 0;       
-        if ($this->Users->delete($user)) {
+        if ($this->Users->save($user)) {
             $response["success"] = 1;
             $response["message"] ="Eliminado con Éxito<br>" .  __('The user has been deleted.');
             $response["redirectUrl"] = Router::url(['controller' => 'Users', 'action' => 'users']);
@@ -172,13 +176,31 @@ class UsersController extends AppController
 
     }
 
-    public function users()
+    public function users($txtSearch = null, $cboNumRegister = 10)
     {        
+        $conditions = [];
+        if (!empty($txtSearch)) {
+            $conditions = ['OR' => [
+                    ['Users.name LIKE' => '%' . $txtSearch . '%'],
+                    ['Users.surname LIKE' => '%' . $txtSearch . '%'],
+                    ['Users.email LIKE' => '%' . $txtSearch . '%'],
+                    ['Users.movil LIKE' => '%' . $txtSearch . '%'],                
+                ],
+                //'AND' => ['Users.active LIKE' => 1],
+            ];
+        }else{
+            //$conditions = ['Users.active' => 1];
+        }
         $this->paginate = [
-            'contain' => ['Profiles']
+            'conditions' => $conditions,
+            'contain' => ['Profiles'],
+            'limit' => $cboNumRegister,
+            'maxLimit' => 100,
+            'order' => ['Users.id' => 'DESC']
         ];
-        $users = $this->paginate($this->Users);
 
+        $users = $this->paginate($this->Users);
+        
         $this->set(compact('users'));
     }
 }

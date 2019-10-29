@@ -2,7 +2,7 @@
 <div class="row">
     <div class="col-12">
         <div class="page-title-box">            
-            <h4 class="page-title">Users</h4>
+            <h4 class="page-title"><?= __('Users')?></h4>
         </div>
     </div>
 </div>     
@@ -19,8 +19,8 @@
                             <input type="txtSearch" class="form-control" id="txtSearch" placeholder="Buscar...">
                         </div>
                         <div class="form-group mx-sm-3">
-                            <label for="status-select" class="mr-2">Registros</label>
-                            <select class="custom-select" id="status-select">
+                            <label for="cboNumRegister" class="mr-2">Registros</label>
+                            <select class="custom-select" id="cboNumRegister">
                                 <option value="10">10</option>
                                 <option value="20">20</option>
                                 <option value="50">50</option>

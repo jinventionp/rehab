@@ -1,21 +1,21 @@
 <?php
 namespace App\Test\TestCase\Model\Table;
 
-use App\Model\Table\TypecontracsTable;
+use App\Model\Table\TypecontractsTable;
 use Cake\ORM\TableRegistry;
 use Cake\TestSuite\TestCase;
 
 /**
- * App\Model\Table\TypecontracsTable Test Case
+ * App\Model\Table\TypecontractsTable Test Case
  */
-class TypecontracsTableTest extends TestCase
+class TypecontractsTableTest extends TestCase
 {
     /**
      * Test subject
      *
-     * @var \App\Model\Table\TypecontracsTable
+     * @var \App\Model\Table\TypecontractsTable
      */
-    public $Typecontracs;
+    public $Typecontracts;
 
     /**
      * Fixtures
@@ -23,8 +23,7 @@ class TypecontracsTableTest extends TestCase
      * @var array
      */
     public $fixtures = [
-        'app.Typecontracs',
-        'app.Contracts'
+        'app.Typecontracts'
     ];
 
     /**
@@ -35,8 +34,8 @@ class TypecontracsTableTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $config = TableRegistry::getTableLocator()->exists('Typecontracs') ? [] : ['className' => TypecontracsTable::class];
-        $this->Typecontracs = TableRegistry::getTableLocator()->get('Typecontracs', $config);
+        $config = TableRegistry::getTableLocator()->exists('Typecontracts') ? [] : ['className' => TypecontractsTable::class];
+        $this->Typecontracts = TableRegistry::getTableLocator()->get('Typecontracts', $config);
     }
 
     /**
@@ -46,7 +45,7 @@ class TypecontracsTableTest extends TestCase
      */
     public function tearDown()
     {
-        unset($this->Typecontracs);
+        unset($this->Typecontracts);
 
         parent::tearDown();
     }

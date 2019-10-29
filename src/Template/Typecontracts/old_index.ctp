@@ -1,19 +1,17 @@
 <?php
 /**
  * @var \App\View\AppView $this
- * @var \App\Model\Entity\Typecontrac[]|\Cake\Collection\CollectionInterface $typecontracs
+ * @var \App\Model\Entity\Typecontract[]|\Cake\Collection\CollectionInterface $typecontracts
  */
 ?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New Typecontrac'), ['action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Contracts'), ['controller' => 'Contracts', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Contract'), ['controller' => 'Contracts', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('New Typecontract'), ['action' => 'add']) ?></li>
     </ul>
 </nav>
-<div class="typecontracs index large-9 medium-8 columns content">
-    <h3><?= __('Typecontracs') ?></h3>
+<div class="typecontracts index large-9 medium-8 columns content">
+    <h3><?= __('Typecontracts') ?></h3>
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
@@ -25,16 +23,16 @@
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($typecontracs as $typecontrac): ?>
+            <?php foreach ($typecontracts as $typecontract): ?>
             <tr>
-                <td><?= $this->Number->format($typecontrac->id) ?></td>
-                <td><?= h($typecontrac->name) ?></td>
-                <td><?= h($typecontrac->created) ?></td>
-                <td><?= h($typecontrac->modified) ?></td>
+                <td><?= $this->Number->format($typecontract->id) ?></td>
+                <td><?= h($typecontract->name) ?></td>
+                <td><?= h($typecontract->created) ?></td>
+                <td><?= h($typecontract->modified) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $typecontrac->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $typecontrac->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $typecontrac->id], ['confirm' => __('Are you sure you want to delete # {0}?', $typecontrac->id)]) ?>
+                    <?= $this->Html->link(__('View'), ['action' => 'view', $typecontract->id]) ?>
+                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $typecontract->id]) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $typecontract->id], ['confirm' => __('Are you sure you want to delete # {0}?', $typecontract->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>

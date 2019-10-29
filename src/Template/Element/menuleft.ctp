@@ -22,22 +22,29 @@
                 <a href="<?=$this->Url->build(["controller" => "Users", "action" => "index"])?>"> <?= __("Users")?> </a>
             </li>
             <li>
+                <a href="<?=$this->Url->build(["controller" => "Cards", "action" => "index"])?>"> <?= __("Cards")?> </a>
+            </li>
+            <li>
+                <a href="<?=$this->Url->build(["controller" => "Contracts", "action" => "index"])?>"> <?= __("Contracts")?> </a>
+            </li>
+            <li>
+                <a href="<?=$this->Url->build(["controller" => "Typecontracts", "action" => "index"])?>"> <?= __("Typecontracts")?> </a>
+            </li>
+            <li>
                 <a href="<?=$this->Url->build(["controller" => "Profiles", "action" => "index"])?>"> <?= __("Profiles")?> </a>
             </li>
             <li>
-                <a href="<?=$this->Url->build(["controller" => "Roles", "action" => "index"])?>"> <?= __("Roles")?> </a>
+                <a href="<?=$this->Url->build(["controller" => "Categories", "action" => "index"])?>"> <?= __("Categories")?> </a>
             </li>
             <li>
-                <a href="<?=$this->Url->build(["controller" => "Advertisements", "action" => "index"])?>"> <?= __("Advertisements")?> </a>
+                <a href="<?=$this->Url->build(["controller" => "Products", "action" => "index"])?>"> <?= __("Products")?> </a>
+            </li>
+            
+            <li>
+                <a href="<?=$this->Url->build(["controller" => "Coupons", "action" => "index"])?>"> <?= __("Coupons")?> </a>
             </li>
             <li>
-                <a href="<?=$this->Url->build(["controller" => "Phones", "action" => "index"])?>"> <?= __("Phones")?> </a>
-            </li>
-            <li>
-                <a href="<?=$this->Url->build(["controller" => "Modules", "action" => "index"])?>"> <?= __("Modules")?> </a>
-            </li>
-            <li>
-                <a href="<?=$this->Url->build(["controller" => "Fields", "action" => "index"])?>"> <?= __("Fields")?> </a>
+                <a href="<?=$this->Url->build(["controller" => "Payments", "action" => "index"])?>"> <?= __("Payments")?> </a>
             </li>
         </ul>
     </li>

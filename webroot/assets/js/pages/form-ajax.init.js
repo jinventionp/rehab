@@ -50,25 +50,78 @@
         $('#contentList').on('click', '.actions a[id ^= "deleteRecord-"]', function() {
             $('#modalDelete').modal('show');
             $('#modalDelete .modal-header h4').html($(this).attr('data-title'));
-
-            var url = $(this).attr('data-url');
-            var urlAction = $(this).attr('data-url-action');
-            var question = $(this).attr('data-question');
-            $("#modalDelete .modal-body").load(url, function(response, status, xhr) {
-                if (status == "error") {
-                    var msg = "Sorry but there was an error: ";
-                    $("#error").html(msg + xhr.status + " " + xhr.statusText);
-                }else if(status == "success"){
-                    $('#textRemove').html(question);
-                    $('#formActions').attr('action', urlAction);
-                }
-            });
+            $("#modalDelete .modal-body").append($(this).attr('data-question'));
+            $("#urlDetele").val($(this).attr('data-url'));
         });
 
-        $('#modalDelete').on('hidden.bs.modal', function(e) {
+        $('#btnDelete').on('click', function() {
+            var url = $("#urlDetele").val();
+            var msgActions = '';
+            $.ajax({
+                type: "POST",
+                url: url,
+                //data: data,
+                headers: {
+                'X-CSRF-Token': $('#_csrfToken').val()
+                },
+                success: function(response) {console.log('mensaje');
+                    if(response.success == 1){ 
+                        $("#contentList").load(response.redirectUrl, function(response, status, xhr) {
+                            if ( status == "error" ) {
+                                var msg = "Sorry but there was an error: ";
+                                $( "#error" ).html( msg + xhr.status + " " + xhr.statusText );
+                            }
+                        });
+                        msgActions = '<div class="alert alert-success alert-dismissible fade show" role="alert">' +
+                                            '<button type="button" class="close" data-dismiss="alert" aria-label="Close">' +
+                                                '<span aria-hidden="true">&times;</span>' +
+                                            '</button>' +
+                                            '<i class="mdi mdi-check-all mr-2"></i>' + response.message +                                        
+                                        '</div>';
+                    }else{
+                        msgActions = '<div class="alert alert-danger alert-dismissible bg-danger text-white border-0 fade show" role="alert">' +
+                                    '<button type="button" class="close" data-dismiss="alert" aria-label="Close">' +
+                                        '<span aria-hidden="true">&times;</span>' + 
+                                    '</button><i class="mdi mdi-check-all mr-2"></i>Error al Guardar<br>' + response.message +
+                                '</div>';
+                    }
+
+                    $('#modalDelete').modal('hide');
+                    $('#msgFormActions').html(msgActions);
+                    $('#msgFormActions').slideDown('slow').delay(3000).fadeOut(1500, function(){}); //Se muestra el mensaje por 5 segundos.
+
+                },
+                dataType: 'json'
+            });
+            /*$.post(url, {'_csrfToken' : $('#_csrfToken').val()},function(response) {
+                if(response.success == 1){ 
+                //$( ".result" ).html(response);
+                    msgActions = '<div class="alert alert-success alert-dismissible fade show" role="alert">' +
+                                        '<button type="button" class="close" data-dismiss="alert" aria-label="Close">' +
+                                            '<span aria-hidden="true">&times;</span>' +
+                                        '</button>' +
+                                        '<i class="mdi mdi-check-all mr-2"></i>' + response.message +                                        
+                                    '</div>';
+                }else{
+                    msgActions = '<div class="alert alert-danger alert-dismissible bg-danger text-white border-0 fade show" role="alert">' +
+                                '<button type="button" class="close" data-dismiss="alert" aria-label="Close">' +
+                                    '<span aria-hidden="true">&times;</span>' + 
+                                '</button><i class="mdi mdi-check-all mr-2"></i>Error al Guardar<br>' + response.message +
+                            '</div>';
+                }
+
+                $('#modalDelete').modal('hide');
+                $('#msgFormActions').html(msgActions);
+                $('#msgFormActions').slideDown('slow').delay(3000).fadeOut(1500, function(){}); //Se muestra el mensaje por 5 segundos.
+            });*/
+        });
+
+
+
+        /*$('#modalDelete').on('hidden.bs.modal', function(e) {
             $("#modalDelete .modal-body").html('<p>Cargando...</p>');
             //$('#btnModalAdd').attr("disabled", true);
-        });
+        });*/
 
         $('#modalAds').on('show.bs.modal', function(e) {
             $("#modalAds .modal-body").html('');

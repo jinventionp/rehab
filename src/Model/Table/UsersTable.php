@@ -103,7 +103,7 @@ class UsersTable extends Table
             ->scalar('password')
             ->maxLength('password', 100)
             ->requirePresence('password', 'create')
-            ->notEmptyString('password', 'El campo Contraseña es Obligatorio', 'update');
+            ->notEmptyString('password', 'El campo Contraseña es Obligatorio', 'create');
 
         $validator
             ->requirePresence('confirm_password', 'create')

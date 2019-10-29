@@ -53,8 +53,7 @@
 				
 			}
 		}); 
-    },   
-
+    },
 	
 	//initilizing
     FormAjax.prototype.init = function() {

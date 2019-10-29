@@ -39,7 +39,7 @@
         <div class="form-group">
             <label for="birth-date" class="control-label">Fecha de Nacimiento</label>
             <!--<input type="text" id="basic-datepicker" class="form-control" placeholder="Basic datepicker">-->
-            <?= $this->Form->control('birth_date', ["label" => false, 'type' => 'text', "class" => "form-control","placeholder" => "AAAA-MM-DD", 'readonly' => "readonly"]);?>
+            <?= $this->Form->control('birth_date', ["label" => false, 'type' => 'text', "class" => "form-control flatpickr-input","placeholder" => "AAAA-MM-DD", 'readonly' => "readonly"]);?>
         </div>
     </div>
 </div>
@@ -66,8 +66,10 @@
 <div class="row">
     <div class="col-md-4">
         <div class="custom-control custom-checkbox">            
-            <input type="checkbox" class="custom-control-input" name="active" id="active" checked="checked" value=""> 
-            <label class="custom-control-label" for="active">Activo</label>           
+            <?=$this->Form->control('active', ['label' => false, 'class' => 'custom-control-input', 'checked' => 'checked', 'templates' => [
+        'inputContainer' => '{{content}}'
+    ]])?>
+            <label class="custom-control-label" for="active">Activo</label>   
         </div>
     </div>
 </div>

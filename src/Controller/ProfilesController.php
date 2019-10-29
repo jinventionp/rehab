@@ -2,7 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
-
+use Cake\Routing\Router;
 /**
  * Profiles Controller
  *
@@ -50,12 +50,23 @@ class ProfilesController extends AppController
         $profile = $this->Profiles->newEntity();
         if ($this->request->is('post')) {
             $profile = $this->Profiles->patchEntity($profile, $this->request->getData());
-            if ($this->Profiles->save($profile)) {
-                $this->Flash->success(__('The profile has been saved.'));
-
-                return $this->redirect(['action' => 'index']);
+            $response["success"] = 0;
+            $response["redirectUrl"] = "";
+            $response["modal"] = "";
+            if(empty($profile->getErrors())){
+                if ($this->Profiles->save($profile)) {
+                    $response["success"] = 1;
+                    $response["message"] = "Guardado con Éxito<br>" . __('The profile has been saved.');
+                    $response["redirectUrl"] = Router::url(['controller' => 'Profiles', 'action' => 'profiles']);
+                    $response["modal"] = "#modalAdd";
+                }else{
+                    $response["message"] = ['error' => ['custom' => __('The profile could not be saved. Please, try again.')]];
+                }
+            }else{
+                $response["message"] = $profile->getErrors();
             }
-            $this->Flash->error(__('The profile could not be saved. Please, try again.'));
+            echo json_encode($response);
+            $this->autoRender = false;
         }
         $this->set(compact('profile'));
     }
@@ -74,12 +85,23 @@ class ProfilesController extends AppController
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $profile = $this->Profiles->patchEntity($profile, $this->request->getData());
-            if ($this->Profiles->save($profile)) {
-                $this->Flash->success(__('The profile has been saved.'));
-
-                return $this->redirect(['action' => 'index']);
+            $response["success"] = 0;
+            $response["redirectUrl"] = "";
+            $response["modal"] = "";
+            if(empty($profile->getErrors())){
+                if ($this->Profiles->save($profile)) {
+                    $response["success"] = 1;
+                    $response["message"] = "Guardado con Éxito<br>" . __('The profile has been saved.');
+                    $response["redirectUrl"] = Router::url(['controller' => 'Profiles', 'action' => 'profiles']);
+                    $response["modal"] = "#modalEdit";
+                }else{
+                    $response["message"] = ['error' => ['custom' => __('The profile could not be saved. Please, try again.')]];
+                }
+            }else{
+                $response["message"] = $profile->getErrors();
             }
-            $this->Flash->error(__('The profile could not be saved. Please, try again.'));
+            echo json_encode($response);
+            $this->autoRender = false;
         }
         $this->set(compact('profile'));
     }
@@ -94,13 +116,44 @@ class ProfilesController extends AppController
     public function delete($id = null)
     {
         $this->request->allowMethod(['post', 'delete']);
+        $response["success"] = 0;
+        $response["redirectUrl"] = "";
+        $response["modal"] = "";
         $profile = $this->Profiles->get($id);
         if ($this->Profiles->delete($profile)) {
-            $this->Flash->success(__('The profile has been deleted.'));
+           $response["success"] = 1;
+            $response["message"] ="Eliminado con Éxito<br>" .  __('The profile has been deleted.');
+            $response["redirectUrl"] = Router::url(['controller' => 'Profiles', 'action' => 'profiles']);
+            $response["modal"] = "#modalDelete";
         } else {
-            $this->Flash->error(__('The profile could not be deleted. Please, try again.'));
+            $response["message"] = ['error' => ['custom' => __('The profile could not be deleted. Please, try again.')]];
         }
+        echo json_encode($response);
+        $this->autoRender = false;
+    }
 
-        return $this->redirect(['action' => 'index']);
+    public function profiles($txtSearch = null, $cboNumRegister = 10)
+    {        
+        $conditions = [];
+        if (!empty($txtSearch)) {
+            $conditions = ['OR' => [
+                    ['Profiles.name LIKE' => '%' . $txtSearch . '%'],
+                ],
+                //'AND' => ['Profiles.active LIKE' => 1],
+            ];
+        }else{
+            //$conditions = ['Profiles.active' => 1];
+        }
+        $this->paginate = [
+            'conditions' => $conditions,
+            'contain' => [],
+            'limit' => $cboNumRegister,
+            'maxLimit' => 100,
+            'order' => ['Profiles.id' => 'DESC']
+        ];
+
+        $profiles = $this->paginate($this->Profiles);
+        
+        $this->set(compact('profiles'));
     }
 }
